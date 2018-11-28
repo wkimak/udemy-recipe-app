@@ -1,0 +1,15 @@
+
+.links_container {
+    margin-left: 100px;
+}
+
+.links_container a {
+    text-decoration: none;
+    color: lightblue;
+    margin-right: 30px;
+}
+
+button.mat-button {
+  right: 0;
+}
+

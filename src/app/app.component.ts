@@ -1,5 +1,11 @@
 import { Component } from '@angular/core';
 
+interface Tile {
+  cols: number;
+  rows: number;
+  color: string;
+}
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -7,4 +13,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   
+  tiles: Tile[] = [
+    {cols: 1, rows: 1, color: 'lightpink'},
+    {cols: 1, rows: 1, color: 'lightblue'}
+  ];
+
 }

@@ -1,0 +1,16 @@
+<mat-toolbar color='primary'>
+  <mat-toolbar-row>
+    <span>Recipe Book</span>
+    <div class='links_container'>
+      <span><a href='#'>Shopping</a></span>
+      <span><a href='#'>Recipes</a></span>
+    </div>
+    
+    <button mat-button [matMenuTriggerFor]='menu'>Manage</button>
+    <mat-menu #menu='matMenu'>
+      <button mat-menu-item>Save Data</button>
+      <button mat-menu-item>Fetch Data</button>
+    </mat-menu>
+   
+  </mat-toolbar-row>
+</mat-toolbar>

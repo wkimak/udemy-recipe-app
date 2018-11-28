@@ -1,1 +1,12 @@
-<app-recipe-item></app-recipe-item>
+<mat-grid-list cols='2' rowHeight='500px'>
+    <mat-grid-tile class='new_recipe_tile' colspan='2' rowspan='.5'>
+        <button mat-raised-button color='primary'>New Recipe</button>
+    </mat-grid-tile>
+    <mat-grid-tile class='recipe_item_tile' colspan='1' rowspan='1' *ngFor='let recipe of recipes'>
+        <app-recipe-item name={{recipe.name}}
+                            description={{recipe.description}}
+                            imagePath={{recipe.imagePath}}>
+        </app-recipe-item>
+    </mat-grid-tile>
+</mat-grid-list>
+

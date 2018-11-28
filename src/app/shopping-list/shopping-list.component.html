@@ -1,5 +1,6 @@
-<p>
-  shopping-list works!
-</p>
 <app-shopping-edit></app-shopping-edit>
-<p>The List</p>
+<mat-list role='list'>
+  <mat-list-item role='listitem' *ngFor='let ingredient of ingredients'>
+    {{ ingredient.name }} ({{ingredient.amount}})
+  </mat-list-item>
+</mat-list>

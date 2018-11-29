@@ -1,9 +1,9 @@
 <mat-grid-list cols='2' rowHeight='200px'>
   <mat-grid-tile colspan='1'>
-      <img src='' />
+      <img [src]='selectedRecipe.imagePath' />
   </mat-grid-tile>
   <mat-grid-tile colspan='1'>
-      <h1>Recipe Name</h1>
+      <h1>Recipe Name: {{ selectedRecipe.name }}</h1>
   </mat-grid-tile>
   <mat-grid-tile colspan='2'>
     <button mat-raised-button [matMenuTriggerFor]='manageRecipe'>
@@ -16,10 +16,10 @@
     </mat-menu>
   </mat-grid-tile>
   <mat-grid-tile colspan='2'>
-    Description
+    Description: {{ selectedRecipe.description }}
   </mat-grid-tile>
   <mat-grid-tile colspan='2'>
-      Ingrediants
+      Ingrediants:
   </mat-grid-tile>
 </mat-grid-list>
 

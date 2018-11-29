@@ -1,17 +1,16 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Recipe } from '../../recipe.model';
 
 @Component({
   selector: 'app-recipe-item',
   templateUrl: './recipe-item.component.html',
   styleUrls: ['./recipe-item.component.css']
 })
-export class RecipeItemComponent implements OnInit {
-  @Input() name: string;
-  @Input() description: string;
-  @Input() imagePath: string;
-  constructor() { }
+export class RecipeItemComponent {
+  @Input() recipe: Recipe;
+  @Output() handleDetails = new EventEmitter<void>();
 
-  ngOnInit() {
+  onHandleDetails(recipeDetails: Recipe) {
+    this.handleDetails.emit();
   }
-
 }

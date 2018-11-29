@@ -1,9 +1,9 @@
-<mat-card>
+<mat-card (click)='onHandleDetails()'>
     <mat-card-header>
-      <mat-card-title>{{ name }}</mat-card-title>
+      <mat-card-title>{{ recipe.name }}</mat-card-title>
     </mat-card-header>
     <mat-card-content>
-      <p>{{ description }}</p>
-      <img [src]='imagePath' />
+      <p>{{ recipe.description }}</p>
+      <img [src]='recipe.imagePath' />
     </mat-card-content>
 </mat-card>

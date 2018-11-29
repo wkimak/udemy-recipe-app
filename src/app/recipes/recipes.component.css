@@ -3,6 +3,7 @@ mat-grid-list {
 }
 
 mat-grid-tile {
-    overflow-y: scroll;
+    height: 100vh;
 }
+
 

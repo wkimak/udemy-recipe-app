@@ -1,8 +1,11 @@
-<mat-grid-list cols='3' rowHeight='500px'>
-  <mat-grid-tile class='recipe_list_tile' colspan='2' rowspan='1'>
-    <app-recipe-list></app-recipe-list>
+<mat-grid-list cols='3'>
+  <mat-grid-tile colspan='2' rowspan='1'>
+    <app-recipe-list (handleDetails)='onHandleDetails($event)'></app-recipe-list>
   </mat-grid-tile>
   <mat-grid-tile class='recipe_detail_tile' colspan='1' rowspan='1'>
-    <app-recipe-detail></app-recipe-detail>
+    <app-recipe-detail *ngIf='selectedRecipe; else notSelected' [selectedRecipe]='selectedRecipe'></app-recipe-detail>
+    <ng-template #notSelected>
+      <p>Please select recipe item to view details!</p>
+    </ng-template>
   </mat-grid-tile>
 </mat-grid-list>

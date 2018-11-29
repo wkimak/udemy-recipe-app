@@ -12,7 +12,11 @@ interface Tile {
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  
+  currentView: string = 'recipes';
+  onChangeView(view) {
+    this.currentView = view;
+  }
+
   tiles: Tile[] = [
     {cols: 1, rows: 1, color: 'lightpink'},
     {cols: 1, rows: 1, color: 'lightblue'}

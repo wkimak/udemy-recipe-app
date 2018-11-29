@@ -1,9 +1,11 @@
-<app-navbar></app-navbar>
-<mat-grid-list cols='1' rowHeight='500px'>
-  <mat-grid-tile [style.background]='tiles[0].color' [colspan]='tiles[0].cols' [rowspan]='tiles[0].rows'>
+<app-navbar (changeView)='onChangeView($event)'></app-navbar>
+<mat-grid-list cols='1' rowHeight='900px'>
+  <mat-grid-tile *ngIf='currentView === "recipes"; else shopping' [style.background]='tiles[0].color' [colspan]='tiles[0].cols' [rowspan]='tiles[0].rows'>
      <app-recipes></app-recipes>
   </mat-grid-tile>
-  <mat-grid-tile [style.background]='tiles[1].color' [colspan]='tiles[1].cols' [rowspan]='tiles[1].rows'>
-    <app-shopping-list></app-shopping-list>
-  </mat-grid-tile>
+  <ng-template #shopping>
+    <mat-grid-tile [style.background]='tiles[1].color' [colspan]='tiles[1].cols' [rowspan]='tiles[1].rows'>
+      <app-shopping-list></app-shopping-list>
+    </mat-grid-tile>
+  </ng-template>
 </mat-grid-list>
